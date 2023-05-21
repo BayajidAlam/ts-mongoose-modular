@@ -1,16 +1,16 @@
-import dayjs from 'dayjs';
-import pino from 'pino';
-import PinoPretty from 'pino-pretty';
+import dayjs from "dayjs";
+import pino from "pino";
+import PinoPretty from "pino-pretty";
 
 const log = pino({
   transport: {
     target: "pino-pretty",
     options: {
-          colorize: true,
-        }
+      colorize: true,
+    },
   },
   prettifier: PinoPretty,
-  timestamp: () => `"time":"${dayjs().format()}"`
-})
+  timestamp: () => `,"time":"${dayjs().format()}"`,
+});
 
-export {log}
+export { log };

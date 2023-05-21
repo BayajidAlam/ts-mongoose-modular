@@ -6,7 +6,7 @@ const { PORT } = process.env;
 const startServer = async (): Promise<void> => {
   try {
     app.listen(PORT, () => {
-      log.info("Server is running");
+      log.info("Server started");
     });
   } catch (err: any) {
     log.error(err.message);

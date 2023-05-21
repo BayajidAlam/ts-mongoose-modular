@@ -15,7 +15,14 @@ app.use(express.urlencoded({ extended: false }));
 dbConnect();
 
 // routes
+import productRoute from './app/modules/Product/product.route'
 
-// default route
+// default routes
+app.get('/', (req,res)=>{
+  res.send('Hello World')
+})
+
+// custom routes
+app.use("/api/v1/products",productRoute);
 
 export { app };

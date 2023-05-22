@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// render ejs 
+app.set('view engine', "ejs")
+
 // db connections
 dbConnect();
 

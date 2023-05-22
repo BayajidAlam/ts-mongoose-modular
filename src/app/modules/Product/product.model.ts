@@ -1,7 +1,7 @@
 import { IProduct } from "./product.interface";
 import mongoose, { Schema } from "mongoose";
 
-const productSchema = new Schema(
+const productSchema = new Schema<IProduct>(
   {
     name: {
       type: String,
@@ -11,6 +11,7 @@ const productSchema = new Schema(
       type: String,
       required: true,
       maxlength: 2000,
+      trim: true,
     },
     price: {
       type: Number,
